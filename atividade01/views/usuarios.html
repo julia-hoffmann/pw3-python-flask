@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <h1>series</h1>
+    <h2>series em destaque</h2>
+    <p>series mais assistidas pelos nossos usuários:</p>
+    <ul>
+        {# Este é um comentário em Jinja2 (Python e Flask) #}
+        <li>filme: <strong>{{filme}}</strong></li>
+        <li>genero: <strong>{{genero}}</strong></li>
+        <li>faixa etaria: <strong>{{faixaetaria}}</strong></li>
+    </ul>
+</main>
+{% endblock %}

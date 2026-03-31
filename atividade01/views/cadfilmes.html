@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> cadastro de filmes</h2>
+<hr>
+<form action="{{url_for('cadfilmes')}}" method="POST">
+<label>filmes</label>
+<input type="text" name="filme" placeholder="insira o nome do filme" required class="form-control">
+
+<form action="" method="POST">
+<label>genero</label>
+<input type="text" name="genero" placeholder="insira o genero" required  class="form-control">
+
+<form action="" method="POST">
+<label>faixa etaria</label>
+<input type="text" name="faixaetaria" placeholder="insira a faixa etaria" required  class="form-control">
+
+<input type="submit" value="cadastrar"  class="btn btn-success">
+<input type="submit" value="limpar" class="btn btn-danger">
+</form>
+<br>
+<br>
+<table class="table table-bordered tabloe-hover">
+    <thead class="table-darl">
+    <tr>
+        <th>filmes</th>
+        <th>genero</th>
+        <th>faixa etaria</th>
+    </tr>
+    </thead>
+    <tbody>
+      {% for filme in listaGames %}
+      <tr>
+        <td>{{filme.filme}}</td>
+        <td>{{filme.genero}}</td>
+        <td>{{filme.faixaetaria}}</td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+
+{% endblock content %}

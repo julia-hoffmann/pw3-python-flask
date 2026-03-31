@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+    <h1>filmes e series destaque</h1>
+    <hr>
+   
+    <h2> lista de filmes disponiveis</h2>
+    <ol>
+    {% for c in listaConsoles %}
+    <li>{{ c }}</li>
+    {% endfor %}
+    </ol>
+
+    <form action="{{url_for('consoles')}}", method="POST">
+      <label> nome do filme/serie:</label>
+      <input type="text" name="novofilme">
+      <input type="submit" value="Cadastrar">
+    </form>
+</main>
+{% endblock content %}
