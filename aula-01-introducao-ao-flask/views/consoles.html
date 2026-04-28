@@ -7,5 +7,15 @@
 </head>
 <body>
 <h1>bem-vindo</h1>
+  <a href="/"><< voltar</a>
+  <h3>console em destaque: </h3>
+  (%for chave, valor in console.items() %)
+  {%endfor%}
+  
+ <details>
+    <sumary> {{ chave }}</sumary>
+  <p>{{ valor }}</p>
+ </details>
+  {%endfor%}
 </body>
 </html>

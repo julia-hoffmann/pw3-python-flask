@@ -31,8 +31,11 @@ def games():
 
 @app.route('/consoles')
 def consoles():
+  console = {"Nome":"Playstation 2",
+               "Fabricante":"Sony",
+               "Ano":"2000"}
   return render_template('consoles.html',
-                         consoles=consoles)
+                         console=console)
 
 
 if __name__ =='__main__': #verifica se o arquivo em __name__ é o principal 
