@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block content%}
+<h2> controle de estoque</h2>
+<br>
+<details>
+    <summary>[ cadastrar novo jogo ]</summary>
+    <div class="col-md-4">
+    <form action="{{url_for('estoque_consoles')}}" method="POST">
+        <input type="text" name="nome" placeholder="nome"
+        class="form-control" required>
+         <input type="fabricante" name="fabricante" placeholder="fabricante"
+        class="form-control" required>
+         <input type="number" name="ano" placeholder="ano"
+        class="form-control" required>
+         <input type="number" name="preco" placeholder="preco"
+        class="form-control" required>
+
+        <input type="submit" value="cadastrar" class="btn-btn-sucess">
+        <input type="reset" value="limpar" class="btn-btn-danger">
+     </form>
+    </div>
+</details>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>nome</th>
+            <th>ano</th>
+            <th>fabricnate</th>
+            <th>preco</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for game in games%}
+        <tr>
+            <td>{{game.nome}}</td>
+             <td>{{game.ano}}</td>
+              <td>{{game.fabricante}}</td>
+                <td>{{game.preco}}</td>
+
+
+        </tr>
+    </tbody>
+</table>
