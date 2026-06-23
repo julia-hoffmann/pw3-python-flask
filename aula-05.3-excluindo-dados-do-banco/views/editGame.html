@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align: center;"> editar jogo</div>
+<form action="" method="POST">
+        <input type="text" name="nome" placeholder="nome"
+        class="form-control" required>
+         <input type="fabricante" name="fabricante" placeholder="fabricante"
+        class="form-control" required>
+         <input type="number" name="ano" placeholder="ano"
+        class="form-control" required>
+         <input type="number" name="preco" placeholder="preco"
+        class="form-control" required>
+
+        <input type="submit" value="alterar" class="btn-btn-sucess">
+        <input type="reset" value="limpar" class="btn-btn-danger">
+</form>
